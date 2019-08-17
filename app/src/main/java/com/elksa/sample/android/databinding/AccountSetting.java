@@ -12,7 +12,7 @@ public class AccountSetting extends BaseObservable {
     private String communicationMode;
     private String defaultPaymentOption;
     private int priceDropPercent;
-    private int showProductReviews;
+    private int productReviews;
     private boolean promoNotification;
 
     @Bindable
@@ -75,12 +75,12 @@ public class AccountSetting extends BaseObservable {
         this.priceDropPercent = priceDropPercent;
     }
 
-    public int getShowProductReviews() {
-        return showProductReviews;
+    public int getProductReviews() {
+        return productReviews;
     }
 
-    public void setShowProductReviews(int showProductReviews) {
-        this.showProductReviews = showProductReviews;
+    public void setProductReviews(int productReviews) {
+        this.productReviews = productReviews;
     }
 
     public boolean isPromoNotification() {

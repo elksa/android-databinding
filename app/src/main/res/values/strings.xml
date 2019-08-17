@@ -9,6 +9,10 @@
     <string name="priceDropPercent">Min Price Drop %</string>
     <string name="showProductReviews">Show Product Reviews Above</string>
     <string name="promoNotification">Promo Notification</string>
-    <string name="sms">SMSn</string>
+    <string name="sms">SMS</string>
     <string name="email">Email</string>
+    <string name="hint_account_name">account name</string>
+    <string name="deals">Deals</string>
+    <string name="promos">Promos</string>
+    <string name="save_settings">Save Settings</string>
 </resources>

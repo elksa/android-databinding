@@ -52,11 +52,14 @@
             android:id="@+id/account_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="account name"
+            android:hint="@string/hint_account_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
             android:text="@={accountSettings.accountName}"
             app:layout_constraintLeft_toRightOf="@+id/account_name_l"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/settings" />
+            app:layout_constraintTop_toBottomOf="@+id/settings"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/notifications_toggle_l"
@@ -94,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="@={accountSettings.deals}"
-            android:text="Deals"
+            android:text="@string/deals"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/promos"
             app:layout_constraintTop_toBottomOf="@+id/notification_types_l" />
@@ -104,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="@={accountSettings.promos}"
-            android:text="Promos"
+            android:text="@string/promos"
             app:layout_constraintLeft_toRightOf="@+id/deals"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/notification_types_l" />
@@ -135,7 +138,7 @@
                 android:layout_height="wrap_content"
                 android:checked="@{accountSettings.communicationMode.equals(@string/email)}"
                 android:onClick="@{() -> eventListener.onCommunicationMode(@string/email)}"
-                android:text="email" />
+                android:text="@string/email" />
 
             <RadioButton
                 android:id="@+id/smsOption"
@@ -143,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:checked="@{accountSettings.communicationMode.equals(@string/sms)}"
                 android:onClick="@{() -> eventListener.onCommunicationMode(@string/sms)}"
-                android:text="SMS" />
+                android:text="@string/sms" />
         </RadioGroup>
 
         <TextView
@@ -186,7 +189,8 @@
             android:progress="@={accountSettings.priceDropPercent}"
             app:layout_constraintLeft_toRightOf="@+id/price_drop_percent_l"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/default_payment_option" />
+            app:layout_constraintTop_toBottomOf="@+id/default_payment_option"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/show_product_reviews_l"
@@ -204,7 +208,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:rating="@={accountSettings.showProductReviews}"
+            android:rating="@={accountSettings.productReviews}"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/show_product_reviews_l" />
@@ -235,7 +239,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="@{(v) -> eventListener.onClickSaveSettings(v)}"
-            android:text="Save Settings"
+            android:text="@string/save_settings"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/promo_notification" />
